@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT.Motec.LdxUpdater", "src\JT.Motec.LdxUpdater\JT.Motec.LdxUpdater.csproj", "{15A56CD0-2462-432F-8C62-0048D9FDAB75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JT.Motec.LdxUpdater.UnitTests", "tests\JT.Motec.LdxUpdater.UnitTests\JT.Motec.LdxUpdater.UnitTests.csproj", "{94FB0512-57F8-49B5-89E6-F542EC33C7E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15A56CD0-2462-432F-8C62-0048D9FDAB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A56CD0-2462-432F-8C62-0048D9FDAB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A56CD0-2462-432F-8C62-0048D9FDAB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A56CD0-2462-432F-8C62-0048D9FDAB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94FB0512-57F8-49B5-89E6-F542EC33C7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FB0512-57F8-49B5-89E6-F542EC33C7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FB0512-57F8-49B5-89E6-F542EC33C7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FB0512-57F8-49B5-89E6-F542EC33C7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
