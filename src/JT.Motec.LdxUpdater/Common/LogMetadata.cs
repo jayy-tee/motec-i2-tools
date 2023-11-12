@@ -1,4 +1,5 @@
 ﻿using System.Xml;
+using System.Xml.Linq;
 
 namespace JT.Motec.LdxUpdater.Common;
 
@@ -39,6 +40,8 @@ public class LogMetadata
         GenerateLaps();
     }
 
+    public XElement GetBeaconXml() => _beacons.ToXElement(); 
+
     private void GenerateLaps()
     {
         _laps.Clear();
@@ -50,14 +53,21 @@ public class LogMetadata
 
             var lap = new Lap(lapNumber, timeStart, beacon.Time);
             _laps.Add(lap);
-
-            if (FastestLapTime is null || FastestLapTime > lap.LapTime)
-            {
-                FastestLapTime = lap.LapTime;
-                FastestLap = lapNumber;
-            }
+            
 
             lapNumber++;
         }
+
+        if (_laps.Count > 1)
+        {
+            var fastestLapTime = _laps.Where(l => l.Number > 0).Min(l => l.LapTimeMicroseconds);
+            var fastestLap = _laps.First(l => l.LapTimeMicroseconds == fastestLapTime);
+            
+            FastestLap = fastestLap.Number;
+            FastestLapTime = fastestLap.LapTime;
+        }
+
+
+
     }
 }
