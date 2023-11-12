@@ -46,7 +46,7 @@ public class LogMetadata
         var lapNumber = 0;
         foreach (var beacon in _beacons)
         {
-            var timeStart = lapNumber > 1 ? _beacons[lapNumber - 1].Time : 0m;
+            var timeStart = lapNumber > 0 ? _beacons[lapNumber - 1].Time : 0m;
 
             var lap = new Lap(lapNumber, timeStart, beacon.Time);
             _laps.Add(lap);
